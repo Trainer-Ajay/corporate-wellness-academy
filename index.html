@@ -43,9 +43,7 @@
       
       <!-- Brand Logo & Name -->
       <a href="#hero" class="flex items-center space-x-3 group">
-        <div class="w-10 h-10 rounded-lg bg-brandEmerald flex items-center justify-center font-poppins font-bold text-white text-xl shadow-md group-hover:bg-emerald-600 transition">
-          TH
-        </div>
+        <img src="logo.jpg" alt="Training Humans Logo" class="w-12 h-12 object-contain rounded-lg bg-white p-1" />
         <div>
           <span class="block font-poppins font-bold text-lg leading-none tracking-wide text-white">TRAINING HUMANS</span>
           <span class="block text-xs text-brandGold font-medium tracking-wider uppercase mt-1">Corporate Wellness Academy</span>
@@ -62,8 +60,12 @@
         <a href="#faqs" class="hover:text-brandEmerald transition">FAQs</a>
       </nav>
 
-      <!-- Desktop CTA Button -->
+      <!-- MSME Badge & Desktop CTA -->
       <div class="hidden sm:flex items-center space-x-4">
+        <div class="flex items-center space-x-1.5 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-full text-xs text-brandGold font-medium">
+          <i data-lucide="shield-check" class="w-4 h-4 text-brandGold"></i>
+          <span>MSME Recognized Institution</span>
+        </div>
         <button onclick="openModal('Apply Now - Header')" class="bg-brandEmerald hover:bg-emerald-600 text-white px-5 py-2.5 rounded-lg font-poppins font-semibold text-sm transition shadow-md shadow-emerald-900/30">
           Apply Now
         </button>
@@ -73,7 +75,6 @@
 
   <!-- 2. FULL-SCREEN HERO SECTION -->
   <section id="hero" class="relative bg-brandNavy text-white py-20 lg:py-28 overflow-hidden">
-    <!-- Subtle Background Glow -->
     <div class="absolute -top-24 -left-24 w-96 h-96 bg-brandEmerald/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-brandGold/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -83,7 +84,7 @@
       <div class="lg:col-span-7 space-y-6">
         <div class="inline-flex items-center space-x-2 bg-slate-800/90 border border-slate-700 px-3.5 py-1.5 rounded-full text-xs font-semibold text-brandGold">
           <i data-lucide="award" class="w-4 h-4 text-brandGold"></i>
-          <span>Professional Certification Body</span>
+          <span>Professional Certification Body • Govt. MSME Recognized</span>
         </div>
         
         <h1 class="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight text-white tracking-tight">
@@ -91,7 +92,7 @@
         </h1>
         
         <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-          Design, deliver, and lead high-impact workplace wellness strategies. Transform organizations through internationally aligned, evidence-based certifications.
+          Design, deliver, and lead high-impact workplace wellness strategies based on the **Training Humans Corporate Wellness Framework™**.
         </p>
 
         <!-- Highlights Grid -->
@@ -119,20 +120,25 @@
           <button onclick="openModal('Apply Now - Hero')" class="bg-brandEmerald hover:bg-emerald-600 text-white px-6 py-3.5 rounded-lg font-poppins font-semibold text-sm transition shadow-lg shadow-emerald-950/50 flex items-center space-x-2">
             <span>🟢 Apply Now</span>
           </button>
-          <button onclick="openModal('Download Prospectus')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-6 py-3.5 rounded-lg font-poppins font-semibold text-sm transition flex items-center space-x-2">
-            <span>📘 Download Prospectus</span>
+          <button onclick="downloadProspectusPDF()" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-6 py-3.5 rounded-lg font-poppins font-semibold text-sm transition flex items-center space-x-2">
+            <i data-lucide="download" class="w-4 h-4 text-brandGold"></i>
+            <span>Download Prospectus (PDF)</span>
           </button>
-          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="bg-emerald-950/60 hover:bg-emerald-900/60 border border-brandEmerald/40 text-brandEmerald px-5 py-3.5 rounded-lg font-poppins font-semibold text-sm transition flex items-center space-x-2">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>WhatsApp Us</span>
-          </a>
         </div>
       </div>
 
       <!-- Right Visual Image -->
       <div class="lg:col-span-5 relative">
-        <div class="rounded-2xl overflow-hidden border-4 border-slate-800/80 shadow-2xl bg-slate-800 aspect-video lg:aspect-square">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Corporate Wellness Training Environment" class="w-full h-full object-cover" />
+        <div class="rounded-2xl overflow-hidden border-4 border-slate-800/80 shadow-2xl bg-slate-800 aspect-square flex items-center justify-center p-8 bg-gradient-to-b from-slate-800 to-slate-900">
+          <div class="text-center space-y-4">
+            <img src="logo.jpg" alt="Training Humans Corporate Wellness Academy" class="w-44 h-44 object-contain mx-auto rounded-xl shadow-lg bg-white p-3" />
+            <h3 class="font-poppins font-bold text-xl text-white">Training Humans</h3>
+            <p class="text-xs text-brandGold font-semibold uppercase tracking-wider">Corporate Wellness Academy</p>
+            <div class="inline-flex items-center space-x-2 bg-amber-500/20 border border-amber-500/40 px-4 py-1.5 rounded-full text-xs text-amber-300 font-semibold">
+              <i data-lucide="award" class="w-4 h-4"></i>
+              <span>MSME Recognized Institution</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -182,51 +188,179 @@
     </div>
   </section>
 
-  <!-- 4. WHY CORPORATE WELLNESS & INDUSTRY GROWTH -->
-  <section class="py-20 bg-white border-y border-slate-100">
+  <!-- 4. INTERACTIVE 10 CORPORATE WELLNESS PILLARS -->
+  <section id="pillars" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <span class="text-brandEmerald font-semibold text-xs tracking-widest uppercase">Strategic Business Imperative</span>
-          <h2 class="font-poppins font-bold text-2xl sm:text-3xl text-brandNavy mt-1 mb-6">
-            Wellness as a Business Strategy, Not Just an Employee Benefit
-          </h2>
-          <p class="text-slate-600 leading-relaxed mb-6 text-sm sm:text-base">
-            Workplace wellness has evolved from soft perks to core operational strategy. Modern organizations require certified experts capable of translating employee wellbeing into measurable organizational performance.
-          </p>
-          
-          <ul class="space-y-3.5">
-            <li class="flex items-center space-x-3 text-slate-700 font-medium text-sm">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-brandEmerald shrink-0"></i>
-              <span>Drives Employee Productivity & Absenteeism Reduction</span>
-            </li>
-            <li class="flex items-center space-x-3 text-slate-700 font-medium text-sm">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-brandEmerald shrink-0"></i>
-              <span>Prevents Burnout and Elevates Talent Retention</span>
-            </li>
-            <li class="flex items-center space-x-3 text-slate-700 font-medium text-sm">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-brandEmerald shrink-0"></i>
-              <span>Fosters Psychological Safety and Leadership Resilience</span>
-            </li>
-          </ul>
-        </div>
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brandEmerald font-semibold text-xs tracking-widest uppercase">Training Humans Corporate Wellness Framework™</span>
+        <h2 class="font-poppins font-bold text-2xl sm:text-3xl text-brandNavy mt-1">The 10 Corporate Wellness Pillars</h2>
+        <p class="mt-3 text-slate-600 text-sm sm:text-base">Click on any pillar below to view its detailed goals and key learning topics.</p>
+      </div>
 
-        <div class="bg-brandNavy rounded-2xl p-8 text-white space-y-6 shadow-xl border border-slate-800">
-          <h3 class="font-poppins font-semibold text-xl text-brandGold">Industry Growth & Demand</h3>
-          <div class="grid grid-cols-2 gap-6 pt-2">
-            <div class="border-l-2 border-brandEmerald pl-4">
-              <div class="font-poppins font-bold text-3xl text-white">70%+</div>
-              <p class="text-xs text-slate-300 mt-1">Corporates prioritizing wellness investments in 2026</p>
+      <!-- Pillars Grid Cards -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-5">
+        
+        <!-- Pillar 1 -->
+        <button onclick="showPillarDetail(1)" class="text-left p-6 border border-slate-200 rounded-xl hover:border-brandEmerald hover:shadow-md transition bg-brandLightBg/60 flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-brandEmerald flex items-center justify-center mb-4 group-hover:bg-brandEmerald group-hover:text-white transition">
+              <i data-lucide="heart-pulse" class="w-5 h-5"></i>
             </div>
-            <div class="border-l-2 border-brandGold pl-4">
-              <div class="font-poppins font-bold text-3xl text-white">3.5x</div>
-              <p class="text-xs text-slate-300 mt-1">Demand growth for certified wellness strategists</p>
-            </div>
+            <span class="text-[10px] font-bold text-brandEmerald uppercase tracking-wider">Pillar 1</span>
+            <h4 class="font-poppins font-semibold text-base text-brandNavy mt-0.5 mb-2">Physical Wellness</h4>
+            <p class="text-xs text-slate-500 line-clamp-2">Build healthier, energetic and disease-resistant employees.</p>
           </div>
-          <blockquote class="text-xs text-slate-400 italic pt-2 border-t border-slate-800">
-            "Organizations are actively seeking accredited experts who understand both human behavior and corporate business drivers."
-          </blockquote>
-        </div>
+          <span class="text-xs font-semibold text-brandEmerald mt-4 inline-flex items-center space-x-1 group-hover:underline">
+            <span>View Topics</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </button>
+
+        <!-- Pillar 2 -->
+        <button onclick="showPillarDetail(2)" class="text-left p-6 border border-slate-200 rounded-xl hover:border-brandEmerald hover:shadow-md transition bg-brandLightBg/60 flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-brandEmerald flex items-center justify-center mb-4 group-hover:bg-brandEmerald group-hover:text-white transition">
+              <i data-lucide="brain" class="w-5 h-5"></i>
+            </div>
+            <span class="text-[10px] font-bold text-brandEmerald uppercase tracking-wider">Pillar 2</span>
+            <h4 class="font-poppins font-semibold text-base text-brandNavy mt-0.5 mb-2">Mental & Emotional</h4>
+            <p class="text-xs text-slate-500 line-clamp-2">Develop emotionally resilient and mentally healthy employees.</p>
+          </div>
+          <span class="text-xs font-semibold text-brandEmerald mt-4 inline-flex items-center space-x-1 group-hover:underline">
+            <span>View Topics</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </button>
+
+        <!-- Pillar 3 -->
+        <button onclick="showPillarDetail(3)" class="text-left p-6 border border-slate-200 rounded-xl hover:border-brandEmerald hover:shadow-md transition bg-brandLightBg/60 flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-brandEmerald flex items-center justify-center mb-4 group-hover:bg-brandEmerald group-hover:text-white transition">
+              <i data-lucide="briefcase" class="w-5 h-5"></i>
+            </div>
+            <span class="text-[10px] font-bold text-brandEmerald uppercase tracking-wider">Pillar 3</span>
+            <h4 class="font-poppins font-semibold text-base text-brandNavy mt-0.5 mb-2">Occupational Wellness</h4>
+            <p class="text-xs text-slate-500 line-clamp-2">Improve satisfaction, productivity, and sustainable performance.</p>
+          </div>
+          <span class="text-xs font-semibold text-brandEmerald mt-4 inline-flex items-center space-x-1 group-hover:underline">
+            <span>View Topics</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </button>
+
+        <!-- Pillar 4 -->
+        <button onclick="showPillarDetail(4)" class="text-left p-6 border border-slate-200 rounded-xl hover:border-brandEmerald hover:shadow-md transition bg-brandLightBg/60 flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-brandEmerald flex items-center justify-center mb-4 group-hover:bg-brandEmerald group-hover:text-white transition">
+              <i data-lucide="users" class="w-5 h-5"></i>
+            </div>
+            <span class="text-[10px] font-bold text-brandEmerald uppercase tracking-wider">Pillar 4</span>
+            <h4 class="font-poppins font-semibold text-base text-brandNavy mt-0.5 mb-2">Social Wellness</h4>
+            <p class="text-xs text-slate-500 line-clamp-2">Build healthy workplace relationships and psychological safety.</p>
+          </div>
+          <span class="text-xs font-semibold text-brandEmerald mt-4 inline-flex items-center space-x-1 group-hover:underline">
+            <span>View Topics</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </button>
+
+        <!-- Pillar 5 -->
+        <button onclick="showPillarDetail(5)" class="text-left p-6 border border-slate-200 rounded-xl hover:border-brandEmerald hover:shadow-md transition bg-brandLightBg/60 flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-brandEmerald flex items-center justify-center mb-4 group-hover:bg-brandEmerald group-hover:text-white transition">
+              <i data-lucide="wallet" class="w-5 h-5"></i>
+            </div>
+            <span class="text-[10px] font-bold text-brandEmerald uppercase tracking-wider">Pillar 5</span>
+            <h4 class="font-poppins font-semibold text-base text-brandNavy mt-0.5 mb-2">Financial Wellness</h4>
+            <p class="text-xs text-slate-500 line-clamp-2">Reduce financial stress and improve financial confidence.</p>
+          </div>
+          <span class="text-xs font-semibold text-brandEmerald mt-4 inline-flex items-center space-x-1 group-hover:underline">
+            <span>View Topics</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </button>
+
+        <!-- Pillar 6 (Signature Pillar) -->
+        <button onclick="showPillarDetail(6)" class="text-left p-6 border-2 border-brandGold rounded-xl hover:shadow-lg transition bg-amber-50/40 flex flex-col justify-between group relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-brandGold text-slate-900 text-[9px] font-bold px-2.5 py-0.5 rounded-bl-lg uppercase tracking-wider">Signature Pillar</div>
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center mb-4 group-hover:bg-brandGold group-hover:text-slate-900 transition">
+              <i data-lucide="shield-alert" class="w-5 h-5"></i>
+            </div>
+            <span class="text-[10px] font-bold text-amber-700 uppercase tracking-wider">Pillar 6</span>
+            <h4 class="font-poppins font-semibold text-base text-brandNavy mt-0.5 mb-2">Safety & Emergency</h4>
+            <p class="text-xs text-slate-600 line-clamp-2">Create emergency-ready workplaces with BLS, CPR & First Aid.</p>
+          </div>
+          <span class="text-xs font-bold text-amber-800 mt-4 inline-flex items-center space-x-1 group-hover:underline">
+            <span>View Topics</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </button>
+
+        <!-- Pillar 7 -->
+        <button onclick="showPillarDetail(7)" class="text-left p-6 border border-slate-200 rounded-xl hover:border-brandEmerald hover:shadow-md transition bg-brandLightBg/60 flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-brandEmerald flex items-center justify-center mb-4 group-hover:bg-brandEmerald group-hover:text-white transition">
+              <i data-lucide="sun" class="w-5 h-5"></i>
+            </div>
+            <span class="text-[10px] font-bold text-brandEmerald uppercase tracking-wider">Pillar 7</span>
+            <h4 class="font-poppins font-semibold text-base text-brandNavy mt-0.5 mb-2">Lifestyle Wellness</h4>
+            <p class="text-xs text-slate-500 line-clamp-2">Promote healthy daily habits that prevent chronic disease.</p>
+          </div>
+          <span class="text-xs font-semibold text-brandEmerald mt-4 inline-flex items-center space-x-1 group-hover:underline">
+            <span>View Topics</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </button>
+
+        <!-- Pillar 8 -->
+        <button onclick="showPillarDetail(8)" class="text-left p-6 border border-slate-200 rounded-xl hover:border-brandEmerald hover:shadow-md transition bg-brandLightBg/60 flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-brandEmerald flex items-center justify-center mb-4 group-hover:bg-brandEmerald group-hover:text-white transition">
+              <i data-lucide="award" class="w-5 h-5"></i>
+            </div>
+            <span class="text-[10px] font-bold text-brandEmerald uppercase tracking-wider">Pillar 8</span>
+            <h4 class="font-poppins font-semibold text-base text-brandNavy mt-0.5 mb-2">Leadership Wellness</h4>
+            <p class="text-xs text-slate-500 line-clamp-2">Enable leaders to create healthy teams and healthy cultures.</p>
+          </div>
+          <span class="text-xs font-semibold text-brandEmerald mt-4 inline-flex items-center space-x-1 group-hover:underline">
+            <span>View Topics</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </button>
+
+        <!-- Pillar 9 -->
+        <button onclick="showPillarDetail(9)" class="text-left p-6 border border-slate-200 rounded-xl hover:border-brandEmerald hover:shadow-md transition bg-brandLightBg/60 flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-brandEmerald flex items-center justify-center mb-4 group-hover:bg-brandEmerald group-hover:text-white transition">
+              <i data-lucide="leaf" class="w-5 h-5"></i>
+            </div>
+            <span class="text-[10px] font-bold text-brandEmerald uppercase tracking-wider">Pillar 9</span>
+            <h4 class="font-poppins font-semibold text-base text-brandNavy mt-0.5 mb-2">Environmental Wellness</h4>
+            <p class="text-xs text-slate-500 line-clamp-2">Create workplaces that support health, air quality, and productivity.</p>
+          </div>
+          <span class="text-xs font-semibold text-brandEmerald mt-4 inline-flex items-center space-x-1 group-hover:underline">
+            <span>View Topics</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </button>
+
+        <!-- Pillar 10 -->
+        <button onclick="showPillarDetail(10)" class="text-left p-6 border border-slate-200 rounded-xl hover:border-brandEmerald hover:shadow-md transition bg-brandLightBg/60 flex flex-col justify-between group">
+          <div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-brandEmerald flex items-center justify-center mb-4 group-hover:bg-brandEmerald group-hover:text-white transition">
+              <i data-lucide="laptop" class="w-5 h-5"></i>
+            </div>
+            <span class="text-[10px] font-bold text-brandEmerald uppercase tracking-wider">Pillar 10</span>
+            <h4 class="font-poppins font-semibold text-base text-brandNavy mt-0.5 mb-2">Digital Wellness</h4>
+            <p class="text-xs text-slate-500 line-clamp-2">Help employees thrive and balance in an always-connected world.</p>
+          </div>
+          <span class="text-xs font-semibold text-brandEmerald mt-4 inline-flex items-center space-x-1 group-hover:underline">
+            <span>View Topics</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </span>
+        </button>
+
       </div>
     </div>
   </section>
@@ -278,79 +412,18 @@
     </div>
   </section>
 
-  <!-- 6. THE 10 CORPORATE WELLNESS PILLARS -->
-  <section id="pillars" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-brandEmerald font-semibold text-xs tracking-widest uppercase">Comprehensive Framework</span>
-        <h2 class="font-poppins font-bold text-2xl sm:text-3xl text-brandNavy mt-1">The 10 Corporate Wellness Pillars</h2>
-        <p class="mt-3 text-slate-600 text-sm sm:text-base">Our multi-dimensional curriculum covering every facet of workplace wellbeing.</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-        <div class="p-5 border border-slate-200 rounded-xl hover:border-brandEmerald transition bg-brandLightBg/60">
-          <i data-lucide="activity" class="w-6 h-6 text-brandEmerald mb-3"></i>
-          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">1. Physical</h4>
-          <p class="text-xs text-slate-500 leading-relaxed">Ergonomics, movement, nutrition, and vital energy management.</p>
-        </div>
-        <div class="p-5 border border-slate-200 rounded-xl hover:border-brandEmerald transition bg-brandLightBg/60">
-          <i data-lucide="brain" class="w-6 h-6 text-brandEmerald mb-3"></i>
-          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">2. Mental & Emotional</h4>
-          <p class="text-xs text-slate-500 leading-relaxed">Stress resilience, emotional intelligence, and mindfulness.</p>
-        </div>
-        <div class="p-5 border border-slate-200 rounded-xl hover:border-brandEmerald transition bg-brandLightBg/60">
-          <i data-lucide="briefcase" class="w-6 h-6 text-brandEmerald mb-3"></i>
-          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">3. Occupational</h4>
-          <p class="text-xs text-slate-500 leading-relaxed">Work-life alignment, goal clarity, and burnout prevention.</p>
-        </div>
-        <div class="p-5 border border-slate-200 rounded-xl hover:border-brandEmerald transition bg-brandLightBg/60">
-          <i data-lucide="users" class="w-6 h-6 text-brandEmerald mb-3"></i>
-          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">4. Social</h4>
-          <p class="text-xs text-slate-500 leading-relaxed">Team cohesion, psychological safety, and communication.</p>
-        </div>
-        <div class="p-5 border border-slate-200 rounded-xl hover:border-brandEmerald transition bg-brandLightBg/60">
-          <i data-lucide="wallet" class="w-6 h-6 text-brandEmerald mb-3"></i>
-          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">5. Financial</h4>
-          <p class="text-xs text-slate-500 leading-relaxed">Financial literacy, planning, and workplace stress reduction.</p>
-        </div>
-        <div class="p-5 border border-slate-200 rounded-xl hover:border-brandEmerald transition bg-brandLightBg/60">
-          <i data-lucide="shield-check" class="w-6 h-6 text-brandEmerald mb-3"></i>
-          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">6. Safety & Emergency</h4>
-          <p class="text-xs text-slate-500 leading-relaxed">First-aid readiness, physical safety, and crisis management.</p>
-        </div>
-        <div class="p-5 border border-slate-200 rounded-xl hover:border-brandEmerald transition bg-brandLightBg/60">
-          <i data-lucide="sun" class="w-6 h-6 text-brandEmerald mb-3"></i>
-          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">7. Lifestyle</h4>
-          <p class="text-xs text-slate-500 leading-relaxed">Sleep hygiene, habit transformation, and fatigue management.</p>
-        </div>
-        <div class="p-5 border border-slate-200 rounded-xl hover:border-brandEmerald transition bg-brandLightBg/60">
-          <i data-lucide="award" class="w-6 h-6 text-brandEmerald mb-3"></i>
-          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">8. Leadership</h4>
-          <p class="text-xs text-slate-500 leading-relaxed">Compassionate leadership and wellness culture building.</p>
-        </div>
-        <div class="p-5 border border-slate-200 rounded-xl hover:border-brandEmerald transition bg-brandLightBg/60">
-          <i data-lucide="leaf" class="w-6 h-6 text-brandEmerald mb-3"></i>
-          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">9. Environmental</h4>
-          <p class="text-xs text-slate-500 leading-relaxed">Workspace optimization, acoustics, and healthy environments.</p>
-        </div>
-        <div class="p-5 border border-slate-200 rounded-xl hover:border-brandEmerald transition bg-brandLightBg/60">
-          <i data-lucide="laptop" class="w-6 h-6 text-brandEmerald mb-3"></i>
-          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">10. Digital</h4>
-          <p class="text-xs text-slate-500 leading-relaxed">Screen balance, digital detoxing, and remote work health.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. ABOUT THE ACADEMY & FOUNDER -->
+  <!-- 6. ABOUT THE ACADEMY & FOUNDER (WITH AJAY KUMAR SHUKLA IMAGE) -->
   <section id="about" class="py-20 bg-brandNavy text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
       
       <!-- Academy Overview -->
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <span class="text-brandGold font-semibold text-xs tracking-widest uppercase">About Training Humans</span>
-          <h2 class="font-poppins font-bold text-2xl sm:text-3xl text-white mt-1 mb-6">
+          <div class="flex items-center space-x-2 text-brandGold font-semibold text-xs tracking-widest uppercase mb-2">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+            <span>MSME Recognized Institution</span>
+          </div>
+          <h2 class="font-poppins font-bold text-2xl sm:text-3xl text-white mb-6">
             Building India's Most Trusted Corporate Wellness Academy
           </h2>
           <p class="text-slate-300 leading-relaxed mb-4 text-sm sm:text-base">
@@ -358,7 +431,7 @@
           </p>
         </div>
         <div class="bg-slate-800/60 p-8 rounded-xl border border-slate-700 space-y-4">
-          <h3 class="font-poppins font-semibold text-lg text-brandGold">Our Vision & Roadmap</h3>
+          <h3 class="font-poppins font-semibold text-lg text-brandGold">Our Vision & Governance</h3>
           <p class="text-slate-300 text-sm leading-relaxed">
             To bridge the gap between corporate productivity and human health by training certified wellness professionals across India and beyond.
           </p>
@@ -369,18 +442,23 @@
         </div>
       </div>
 
-      <!-- Founder Profile -->
+      <!-- Founder Profile with Provided Image -->
       <div class="border-t border-slate-800/80 pt-16 grid lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-4 flex justify-center">
-          <div class="w-48 h-48 rounded-full border-4 border-brandGold overflow-hidden bg-slate-700 shadow-xl">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" alt="Ajay Kumar Shukla" class="w-full h-full object-cover" />
+          <div class="relative group">
+            <div class="w-56 h-72 rounded-2xl border-2 border-brandGold overflow-hidden bg-slate-800 shadow-2xl">
+              <img src="Ajay Kumar Shukla Image.jpeg" alt="Ajay Kumar Shukla" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+            </div>
+            <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-brandGold text-slate-950 font-poppins font-bold text-xs px-4 py-1.5 rounded-full shadow-md whitespace-nowrap">
+              Founder & Director
+            </div>
           </div>
         </div>
-        <div class="lg:col-span-8 space-y-3 text-center lg:text-left">
+        <div class="lg:col-span-8 space-y-4 text-center lg:text-left pt-4 lg:pt-0">
           <span class="text-brandGold text-xs font-semibold uppercase tracking-widest">Leadership</span>
-          <h3 class="font-poppins font-bold text-2xl text-white">Ajay Kumar Shukla</h3>
-          <p class="text-xs text-brandEmerald font-medium">Founder, Training Humans | Corporate L&D Specialist</p>
-          <p class="text-slate-300 text-sm leading-relaxed max-w-2xl">
+          <h3 class="font-poppins font-bold text-2xl sm:text-3xl text-white">Ajay Kumar Shukla</h3>
+          <p class="text-xs sm:text-sm text-brandEmerald font-medium">Founder, Training Humans | Corporate L&D Specialist</p>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
             With over two decades of experience in corporate learning, sales, and behavioral interventions, Ajay Kumar Shukla established Training Humans to bring professional governance, scientific structure, and measurable outcomes to corporate wellness training.
           </p>
         </div>
@@ -388,7 +466,7 @@
     </div>
   </section>
 
-  <!-- 8. FREQUENTLY ASKED QUESTIONS -->
+  <!-- 7. FREQUENTLY ASKED QUESTIONS -->
   <section id="faqs" class="py-20 bg-brandLightBg">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
@@ -412,6 +490,17 @@
         <!-- FAQ 2 -->
         <div class="border border-slate-200 rounded-xl bg-white overflow-hidden shadow-sm">
           <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-poppins font-semibold text-brandNavy flex justify-between items-center text-sm focus:outline-none">
+            <span>Is Training Humans an MSME recognized institution?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0"></i>
+          </button>
+          <div class="px-6 py-4 text-xs sm:text-sm text-slate-600 border-t border-slate-100 hidden leading-relaxed">
+            Yes, Training Humans is a registered MSME institution in India, adhering to recognized operational and educational standards.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border border-slate-200 rounded-xl bg-white overflow-hidden shadow-sm">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-poppins font-semibold text-brandNavy flex justify-between items-center text-sm focus:outline-none">
             <span>How are the live sessions conducted?</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0"></i>
           </button>
@@ -419,45 +508,23 @@
             Sessions are held live online via interactive virtual classrooms. You will participate in practical assessments, case studies, and real-time facilitator demonstrations.
           </div>
         </div>
-
-        <!-- FAQ 3 -->
-        <div class="border border-slate-200 rounded-xl bg-white overflow-hidden shadow-sm">
-          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-poppins font-semibold text-brandNavy flex justify-between items-center text-sm focus:outline-none">
-            <span>Does the academy assist with business development?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0"></i>
-          </button>
-          <div class="px-6 py-4 text-xs sm:text-sm text-slate-600 border-t border-slate-100 hidden leading-relaxed">
-            Yes. Our program includes specific modules on proposal writing, pricing strategies, pitch deck development, and alumni mentoring to help you secure corporate clients.
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- 9. FINAL CALL TO ACTION -->
-  <section class="py-16 bg-gradient-to-r from-brandNavy to-slate-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-      <h2 class="font-poppins font-bold text-2xl sm:text-3xl">Ready to Lead Corporate Wellness?</h2>
-      <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-        Join our upcoming cohort and transform your career while shaping healthier, higher-performing corporate workplaces.
-      </p>
-      <div class="flex flex-wrap justify-center gap-4 pt-2">
-        <button onclick="openModal('Apply Now - CTA Section')" class="bg-brandEmerald hover:bg-emerald-600 text-white px-8 py-3.5 rounded-lg font-poppins font-semibold text-sm transition shadow-lg">
-          Apply Now
-        </button>
-        <button onclick="openModal('Download Prospectus - CTA Section')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-8 py-3.5 rounded-lg font-poppins font-semibold text-sm transition">
-          Download Prospectus
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10. FOOTER -->
+  <!-- 8. FOOTER -->
   <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800/80 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
-      <div class="space-y-2">
-        <span class="font-poppins font-bold text-sm text-white block">TRAINING HUMANS</span>
-        <p class="leading-relaxed">Developing Corporate Wellness Professionals for Healthier Workplaces.</p>
+      <div class="space-y-3">
+        <div class="flex items-center space-x-3">
+          <img src="logo.jpg" alt="Logo" class="w-8 h-8 rounded bg-white p-0.5 object-contain" />
+          <span class="font-poppins font-bold text-sm text-white">TRAINING HUMANS</span>
+        </div>
+        <p class="leading-relaxed text-slate-400">Developing Corporate Wellness Professionals for Healthier Workplaces.</p>
+        <div class="inline-flex items-center space-x-1.5 text-[11px] text-brandGold">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+          <span>MSME Recognized Institution</span>
+        </div>
       </div>
       <div>
         <h5 class="font-semibold text-white mb-3 text-sm">Quick Links</h5>
@@ -485,50 +552,66 @@
     </div>
   </footer>
 
-  <!-- LEAD GENERATION POPUP MODAL -->
+  <!-- MODAL 1: LEAD APPLICATION POPUP -->
   <div id="prospectusModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
     <div class="bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 relative shadow-2xl scale-95 transition-transform duration-300" id="modalContainer">
-      
-      <!-- Close Button -->
       <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
-      
       <div class="text-center mb-6">
-        <h3 id="modalTitle" class="font-poppins font-bold text-xl text-brandNavy">Download Prospectus</h3>
-        <p class="text-xs text-slate-500 mt-1">Fill in your details to receive full syllabus & program details.</p>
+        <h3 id="modalTitle" class="font-poppins font-bold text-xl text-brandNavy">Apply Now</h3>
+        <p class="text-xs text-slate-500 mt-1">Fill in your details to get started with Training Humans.</p>
       </div>
-
-      <!-- Lead Capture Form -->
       <form onsubmit="handleFormSubmit(event)" class="space-y-4">
         <div>
           <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name</label>
-          <input type="text" required placeholder="John Doe" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-brandEmerald focus:ring-1 focus:ring-brandEmerald" />
+          <input type="text" required placeholder="John Doe" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-brandEmerald" />
         </div>
         <div>
           <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address</label>
-          <input type="email" required placeholder="john@company.com" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-brandEmerald focus:ring-1 focus:ring-brandEmerald" />
+          <input type="email" required placeholder="john@company.com" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-brandEmerald" />
         </div>
         <div>
           <label class="block text-xs font-semibold text-slate-700 mb-1">Mobile Number</label>
-          <input type="tel" required placeholder="+91 9876543210" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-brandEmerald focus:ring-1 focus:ring-brandEmerald" />
+          <input type="tel" required placeholder="+91 9876543210" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-brandEmerald" />
         </div>
-        <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Profession</label>
-          <select required class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-brandEmerald focus:ring-1 focus:ring-brandEmerald text-slate-700">
-            <option value="">Select Profession</option>
-            <option value="HR / L&D">HR / L&D Professional</option>
-            <option value="Corporate Trainer">Corporate Trainer</option>
-            <option value="Healthcare">Healthcare Professional</option>
-            <option value="Coach / Consultant">Coach / Consultant</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-        
-        <button type="submit" class="w-full bg-brandEmerald hover:bg-emerald-600 text-white font-poppins font-semibold text-sm py-3 rounded-lg transition shadow-md shadow-emerald-900/20">
+        <button type="submit" class="w-full bg-brandEmerald hover:bg-emerald-600 text-white font-poppins font-semibold text-sm py-3 rounded-lg transition shadow-md">
           Submit & Proceed
         </button>
       </form>
+    </div>
+  </div>
+
+  <!-- MODAL 2: PILLAR DETAIL POPUP -->
+  <div id="pillarModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto" id="pillarModalContainer">
+      
+      <button onclick="closePillarModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-6">
+        <div id="pillarHeaderBadge" class="inline-block text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-emerald-100 text-brandEmerald mb-2">
+          Pillar Details
+        </div>
+        <h3 id="pillarModalTitle" class="font-poppins font-bold text-2xl text-brandNavy">Pillar Name</h3>
+        <p id="pillarModalGoal" class="text-sm font-medium text-slate-600 mt-2 bg-slate-100 p-3.5 rounded-lg border-l-4 border-brandEmerald">
+          Goal: Description goes here
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-3 uppercase tracking-wider text-xs">Curriculum Topics Covered:</h4>
+        <ul id="pillarModalTopics" class="grid sm:grid-cols-2 gap-2.5">
+          <!-- Dynamically Injected -->
+        </ul>
+      </div>
+
+      <div class="mt-8 pt-4 border-t border-slate-200 flex justify-end">
+        <button onclick="closePillarModal()" class="bg-slate-800 text-white px-5 py-2 rounded-lg text-xs font-semibold hover:bg-slate-700 transition">
+          Close Window
+        </button>
+      </div>
     </div>
   </div>
 
@@ -537,16 +620,156 @@
     // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Modal Controls
+    // 10 Pillars Full Dataset
+    const pillarsData = {
+      1: {
+        title: "Pillar 1. Physical Wellness",
+        goal: "Build healthier, energetic and disease-resistant employees.",
+        isSignature: false,
+        topics: [
+          "Heart Health", "Diabetes Prevention", "Blood Pressure Awareness", 
+          "Healthy Weight Management", "Nutrition at Work", "Exercise & Mobility", 
+          "Stretching at Desk", "Sleep Health", "Hydration", "Immunity", 
+          "Lifestyle Disease Prevention", "Women's Physical Health", "Men's Health", "Healthy Ageing"
+        ]
+      },
+      2: {
+        title: "Pillar 2. Mental & Emotional Wellness",
+        goal: "Develop emotionally resilient and mentally healthy employees.",
+        isSignature: false,
+        topics: [
+          "Stress Management", "Burnout Prevention", "Anxiety Awareness", 
+          "Emotional Intelligence", "Mindfulness", "Resilience", "Positive Psychology", 
+          "Happiness at Work", "Gratitude", "Managing Emotions", "Self-awareness", "Self-care"
+        ]
+      },
+      3: {
+        title: "Pillar 3. Occupational Wellness",
+        goal: "Improve satisfaction, productivity, and sustainable performance at work.",
+        isSignature: false,
+        topics: [
+          "Work-Life Integration", "Time Management", "Productivity", "Focus & Attention", 
+          "Managing Workload", "Preventing Burnout", "Career Growth", "Hybrid Working", 
+          "Remote Work Well-being", "Workplace Motivation"
+        ]
+      },
+      4: {
+        title: "Pillar 4. Social Wellness",
+        goal: "Build healthy workplace relationships.",
+        isSignature: false,
+        topics: [
+          "Communication Skills", "Team Collaboration", "Trust Building", "Conflict Resolution", 
+          "Workplace Civility", "Respect at Work", "Diversity & Inclusion", "Psychological Safety", "Relationship Building"
+        ]
+      },
+      5: {
+        title: "Pillar 5. Financial Wellness",
+        goal: "Reduce financial stress and improve financial confidence.",
+        isSignature: false,
+        topics: [
+          "Personal Budgeting", "Saving Habits", "Investments", "Insurance Awareness", 
+          "Retirement Planning", "Tax Basics", "Emergency Fund Planning", "Financial Goal Setting"
+        ]
+      },
+      6: {
+        title: "Pillar 6. Safety & Emergency Wellness",
+        goal: "Create emergency-ready workplaces.",
+        isSignature: true,
+        topics: [
+          "Basic Life Support (BLS)", "CPR", "AED Awareness", "Choking Response", 
+          "First Aid Awareness", "Emergency Response", "Medical Emergencies", 
+          "Workplace Safety", "Fire Safety Awareness", "Disaster Preparedness", "Mock Emergency Drills"
+        ]
+      },
+      7: {
+        title: "Pillar 7. Lifestyle Wellness",
+        goal: "Promote healthy daily habits that prevent chronic disease.",
+        isSignature: false,
+        topics: [
+          "Healthy Habits", "Digital Detox", "Tobacco & Alcohol Awareness", "Ergonomics", 
+          "Healthy Eating", "Morning & Evening Routines", "Energy Management", "Screen-Time Management"
+        ]
+      },
+      8: {
+        title: "Pillar 8. Leadership Wellness",
+        goal: "Enable leaders to create healthy teams and healthy cultures.",
+        isSignature: false,
+        topics: [
+          "Leading Healthy Teams", "Manager Mental Health", "Coaching Conversations", 
+          "Giving Feedback", "Compassionate Leadership", "Empathy", "Preventing Team Burnout", 
+          "Employee Engagement", "Building High-Performance Teams"
+        ]
+      },
+      9: {
+        title: "Pillar 9. Environmental Wellness",
+        goal: "Create workplaces that support health and productivity.",
+        isSignature: false,
+        topics: [
+          "Healthy Workplace Design", "Indoor Air Quality Awareness", "Workplace Cleanliness", 
+          "Sustainability", "Green Workplaces", "Noise Management", "Healthy Work Environment", "Ergonomic Workstations"
+        ]
+      },
+      10: {
+        title: "Pillar 10. Digital Wellness",
+        goal: "Help employees thrive in an always-connected world.",
+        isSignature: false,
+        topics: [
+          "Healthy Technology Use", "Digital Fatigue", "Cyber Wellness", "AI for Well-being", 
+          "Managing Notifications", "Screen Fatigue", "Digital Productivity", "Healthy Remote Working Practices"
+        ]
+      }
+    };
+
+    // Show Pillar Detail Modal
+    function showPillarDetail(id) {
+      const data = pillarsData[id];
+      const modal = document.getElementById('pillarModal');
+      const container = document.getElementById('pillarModalContainer');
+      const badge = document.getElementById('pillarHeaderBadge');
+
+      document.getElementById('pillarModalTitle').innerText = data.title;
+      document.getElementById('pillarModalGoal').innerText = "Goal: " + data.goal;
+
+      if(data.isSignature) {
+        badge.innerText = "Training Humans Signature Pillar";
+        badge.className = "inline-block text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 mb-2 border border-amber-300";
+      } else {
+        badge.innerText = "Corporate Wellness Segment";
+        badge.className = "inline-block text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-emerald-100 text-brandEmerald mb-2";
+      }
+
+      const listContainer = document.getElementById('pillarModalTopics');
+      listContainer.innerHTML = '';
+      
+      data.topics.forEach(topic => {
+        const li = document.createElement('li');
+        li.className = 'flex items-center space-x-2 text-xs font-medium text-slate-700 bg-slate-50 p-2.5 rounded-md border border-slate-200';
+        li.innerHTML = `<i data-lucide="check" class="w-3.5 h-3.5 text-brandEmerald shrink-0"></i><span>${topic}</span>`;
+        listContainer.appendChild(li);
+      });
+
+      lucide.createIcons();
+      
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      container.classList.remove('scale-95');
+      container.classList.add('scale-100');
+    }
+
+    function closePillarModal() {
+      const modal = document.getElementById('pillarModal');
+      const container = document.getElementById('pillarModalContainer');
+      
+      container.classList.remove('scale-100');
+      container.classList.add('scale-95');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    // Modal Controls for Lead Form
     function openModal(titleText) {
       const modal = document.getElementById('prospectusModal');
       const container = document.getElementById('modalContainer');
       const modalTitle = document.getElementById('modalTitle');
-      
-      if (titleText) {
-        modalTitle.innerText = titleText;
-      }
-      
+      if (titleText) modalTitle.innerText = titleText;
       modal.classList.remove('opacity-0', 'pointer-events-none');
       container.classList.remove('scale-95');
       container.classList.add('scale-100');
@@ -555,20 +778,68 @@
     function closeModal() {
       const modal = document.getElementById('prospectusModal');
       const container = document.getElementById('modalContainer');
-      
       container.classList.remove('scale-100');
       container.classList.add('scale-95');
       modal.classList.add('opacity-0', 'pointer-events-none');
     }
 
-    // Handle Lead Form Submission
     function handleFormSubmit(e) {
       e.preventDefault();
-      alert('Thank you! Your details have been recorded. The prospectus will begin downloading shortly.');
+      alert('Thank you! Your details have been recorded.');
       closeModal();
     }
 
-    // Toggle FAQ Accordions
+    // Dynamic Downloadable Prospectus (PDF Generator)
+    function downloadProspectusPDF() {
+      const textContent = `TRAINING HUMANS - CORPORATE WELLNESS ACADEMY
+(Govt. MSME Recognized Institution)
+
+Founder: Ajay Kumar Shukla
+Framework: Training Humans Corporate Wellness Framework™
+
+----------------------------------------------------
+THE 10 CORPORATE WELLNESS PILLARS:
+----------------------------------------------------
+1. Physical Wellness
+   Goal: Build healthier, energetic and disease-resistant employees.
+2. Mental & Emotional Wellness
+   Goal: Develop emotionally resilient and mentally healthy employees.
+3. Occupational Wellness
+   Goal: Improve satisfaction, productivity, and sustainable performance at work.
+4. Social Wellness
+   Goal: Build healthy workplace relationships.
+5. Financial Wellness
+   Goal: Reduce financial stress and improve financial confidence.
+6. Safety & Emergency Wellness (Signature Pillar)
+   Goal: Create emergency-ready workplaces (BLS, CPR, First Aid).
+7. Lifestyle Wellness
+   Goal: Promote healthy daily habits that prevent chronic disease.
+8. Leadership Wellness
+   Goal: Enable leaders to create healthy teams and healthy cultures.
+9. Environmental Wellness
+   Goal: Create workplaces that support health and productivity.
+10. Digital Wellness
+   Goal: Help employees thrive in an always-connected world.
+
+----------------------------------------------------
+CERTIFICATION LEVELS:
+- Level 1: CCWT® (Certified Corporate Wellness Trainer)
+- Level 2: CCWC® (Certified Corporate Wellness Consultant)
+- Level 3: MCWS® (Master Corporate Wellness Strategist)
+
+Contact: info@traininghumans.com | +91 98765 43210
+Website: https://www.traininghumans.com
+`;
+
+      const blob = new Blob([textContent], { type: 'text/plain' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'Training_Humans_Prospectus.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
     function toggleFaq(button) {
       const content = button.nextElementSibling;
       const icon = button.querySelector('i');
