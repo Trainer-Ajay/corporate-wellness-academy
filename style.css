@@ -1,1 +1,26 @@
-body{font-family:Arial,sans-serif;margin:0;color:#1f2937}.hero{padding:80px;text-align:center;background:linear-gradient(135deg,#0f172a,#0ea5a4);color:#fff}.btn{background:#fff;color:#0f172a;padding:12px 20px;border-radius:6px;text-decoration:none}.cards{display:flex;gap:20px;flex-wrap:wrap}.card{border:1px solid #ddd;padding:20px;border-radius:10px;flex:1;min-width:180px}section{padding:40px;max-width:1000px;margin:auto}footer{text-align:center;padding:30px;background:#f3f4f6}
+/* Base styles and custom scrollbar adjustments */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #334155;
+  background-color: #ffffff;
+}
+
+/* Modal Transition */
+#prospectusModal {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Rotate transform utility for FAQ icons */
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+/* Custom focus states */
+input:focus, select:focus {
+  border-color: #10B981 !important;
+  ring: 2px #10B981;
+}
