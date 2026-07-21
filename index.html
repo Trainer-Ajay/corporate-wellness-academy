@@ -1,13 +1,554 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>CCWT Prospectus</title><link rel='stylesheet' href='style.css'></head>
-<body><header class='hero'><h1>Certified Corporate Wellness Trainer (CCWT®)</h1>
-<p>Training Humans Corporate Wellness Academy</p><a class='btn' href='#journey'>Explore</a></header>
-<section><h2>Why Corporate Wellness?</h2><p>Organizations invest in wellness to improve health, engagement, productivity and safety.</p></section>
-<section><h2>3-Level Certification Pathway</h2><div class='cards'>
-<div class='card'><h3>CCWT®</h3><p>Foundation: Trainer</p></div>
-<div class='card'><h3>CCWC®</h3><p>Advanced: Consultant</p></div>
-<div class='card'><h3>MCWS®</h3><p>Expert: Strategist</p></div></div></section>
-<section id='journey'><h2>Professional Qualification Framework</h2><ul>
-<li>Competency Framework</li><li>Practical Assessments</li><li>Workshop Templates</li><li>Business Development</li><li>Alumni Mentoring</li></ul></section>
-<footer><p>© Training Humans Corporate Wellness Academy</p></footer>
-<script src='script.js'></script></body></html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Training Humans | Corporate Wellness Academy</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandNavy: '#0F172A',
+            brandEmerald: '#10B981',
+            brandGold: '#F59E0B',
+            brandSlate: '#334155',
+            brandLightBg: '#F8FAFC'
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            inter: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Style Sheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-inter text-brandSlate bg-white antialiased">
+
+  <!-- 1. STICKY NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-brandNavy/95 backdrop-blur-md border-b border-slate-800 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-lg bg-brandEmerald flex items-center justify-center font-poppins font-bold text-white text-xl">
+          TH
+        </div>
+        <div>
+          <span class="block font-poppins font-bold text-lg leading-none tracking-wide text-white">TRAINING HUMANS</span>
+          <span class="block text-xs text-brandGold font-medium tracking-wider uppercase mt-1">Corporate Wellness Academy</span>
+        </div>
+      </div>
+      
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#hero" class="hover:text-brandEmerald transition">Home</a>
+        <a href="#who-should-enroll" class="hover:text-brandEmerald transition">Who Should Enroll</a>
+        <a href="#pathway" class="hover:text-brandEmerald transition">Certifications</a>
+        <a href="#pillars" class="hover:text-brandEmerald transition">10 Pillars</a>
+        <a href="#about" class="hover:text-brandEmerald transition">About</a>
+        <a href="#faqs" class="hover:text-brandEmerald transition">FAQs</a>
+      </nav>
+
+      <div class="hidden md:flex items-center space-x-4">
+        <button onclick="openModal('Apply Now')" class="bg-brandEmerald hover:bg-emerald-600 text-white px-5 py-2.5 rounded-lg font-poppins font-semibold text-sm transition shadow-md shadow-emerald-900/20">
+          Apply Now
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section id="hero" class="relative bg-brandNavy text-white py-20 lg:py-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center space-x-2 bg-slate-800/80 border border-slate-700 px-3 py-1.5 rounded-full text-xs font-semibold text-brandGold">
+          <i data-lucide="award" class="w-4 h-4"></i>
+          <span>Professional Certification Authority</span>
+        </div>
+        
+        <h1 class="font-poppins font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight">
+          Become a Certified Corporate Wellness Professional
+        </h1>
+        
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+          Design, deliver, and lead high-impact workplace wellness strategies. Transform organizations through internationally aligned, evidence-based certifications.
+        </p>
+
+        <!-- Highlights Grid -->
+        <div class="grid grid-cols-2 gap-4 py-2">
+          <div class="flex items-center space-x-3">
+            <i data-lucide="video" class="w-5 h-5 text-brandEmerald"></i>
+            <span class="text-sm font-medium text-slate-200">Live Online Learning</span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i data-lucide="file-check" class="w-5 h-5 text-brandEmerald"></i>
+            <span class="text-sm font-medium text-slate-200">Practical Assessments</span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i data-lucide="trending-up" class="w-5 h-5 text-brandEmerald"></i>
+            <span class="text-sm font-medium text-slate-200">Business Development</span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i data-lucide="users" class="w-5 h-5 text-brandEmerald"></i>
+            <span class="text-sm font-medium text-slate-200">Alumni Mentoring</span>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap gap-4 pt-4">
+          <button onclick="openModal('Apply Now')" class="bg-brandEmerald hover:bg-emerald-600 text-white px-6 py-3.5 rounded-lg font-poppins font-semibold text-sm transition shadow-lg flex items-center space-x-2">
+            <span>🟢 Apply Now</span>
+          </button>
+          <button onclick="openModal('Download Prospectus')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-6 py-3.5 rounded-lg font-poppins font-semibold text-sm transition flex items-center space-x-2">
+            <span>📘 Download Prospectus</span>
+          </button>
+          <a href="https://wa.me/" target="_blank" class="bg-emerald-950/60 hover:bg-emerald-900/60 border border-brandEmerald/40 text-brandEmerald px-5 py-3.5 rounded-lg font-poppins font-semibold text-sm transition flex items-center space-x-2">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp Us</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 relative">
+        <div class="rounded-2xl overflow-hidden border-4 border-slate-800 shadow-2xl bg-slate-800">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="Corporate Wellness Training" class="w-full h-auto object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECOMMENDED SECTION: WHO SHOULD ENROLL -->
+  <section id="who-should-enroll" class="py-20 bg-brandLightBg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-poppins font-bold text-2xl sm:text-3xl text-brandNavy">Who Should Enroll?</h2>
+        <p class="mt-3 text-slate-600">Designed specifically for forward-thinking professionals driving organizational and human change.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
+          <i data-lucide="briefcase" class="w-8 h-8 text-brandEmerald mb-4"></i>
+          <h3 class="font-poppins font-semibold text-lg text-brandNavy mb-2">HR & L&D Leaders</h3>
+          <p class="text-sm text-slate-600">Build strategically aligned wellness interventions that enhance employee engagement, retention, and performance.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
+          <i data-lucide="presentation" class="w-8 h-8 text-brandEmerald mb-4"></i>
+          <h3 class="font-poppins font-semibold text-lg text-brandNavy mb-2">Corporate Trainers</h3>
+          <p class="text-sm text-slate-600">Expand your training portfolio with high-demand, certified corporate wellness and health modules.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
+          <i data-lucide="stetho-scope" class="w-8 h-8 text-brandEmerald mb-4" style="stroke-width:2;"></i>
+          <h3 class="font-poppins font-semibold text-lg text-brandNavy mb-2">Healthcare Professionals</h3>
+          <p class="text-sm text-slate-600">Transition clinical expertise into corporate wellness consulting and preventive workplace strategies.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
+          <i data-lucide="user-check" class="w-8 h-8 text-brandEmerald mb-4"></i>
+          <h3 class="font-poppins font-semibold text-lg text-brandNavy mb-2">Coaches & Consultants</h3>
+          <p class="text-sm text-slate-600">Establish market credibility with corporate decision-makers using a structured qualification framework.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
+          <i data-lucide="graduation-cap" class="w-8 h-8 text-brandEmerald mb-4"></i>
+          <h3 class="font-poppins font-semibold text-lg text-brandNavy mb-2">Educators & Academicians</h3>
+          <p class="text-sm text-slate-600">Integrate holistic wellbeing methodologies into modern institutional and organizational learning structures.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
+          <i data-lucide="rocket" class="w-8 h-8 text-brandEmerald mb-4"></i>
+          <h3 class="font-poppins font-semibold text-lg text-brandNavy mb-2">Aspiring Wellness Entrepreneurs</h3>
+          <p class="text-sm text-slate-600">Launch an independent corporate wellness consultancy backed by business development guidance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. WHY CORPORATE WELLNESS & 4. INDUSTRY GROWTH -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-brandEmerald font-semibold text-sm tracking-wider uppercase">Strategic Business Imperative</span>
+          <h2 class="font-poppins font-bold text-2xl sm:text-3xl text-brandNavy mt-2 mb-6">
+            Wellness as a Strategy, Not an Employee Benefit
+          </h2>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            Workplace wellness has evolved from soft perks to core operational strategy. Modern organizations require certified experts capable of translating employee wellbeing into measurable organizational performance.
+          </p>
+          
+          <ul class="space-y-3">
+            <li class="flex items-center space-x-3 text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-brandEmerald"></i>
+              <span>Drives Employee Productivity & Absenteeism Reduction</span>
+            </li>
+            <li class="flex items-center space-x-3 text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-brandEmerald"></i>
+              <span>Prevents Burnout and Elevates Talent Retention</span>
+            </li>
+            <li class="flex items-center space-x-3 text-slate-700 font-medium">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-brandEmerald"></i>
+              <span>Fosters Psychological Safety and Leadership Resilience</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-brandNavy rounded-2xl p-8 text-white space-y-6 shadow-xl">
+          <h3 class="font-poppins font-semibold text-xl text-brandGold">Industry Demand & Growth</h3>
+          <div class="grid grid-cols-2 gap-6 pt-2">
+            <div class="border-l-2 border-brandEmerald pl-4">
+              <div class="font-poppins font-bold text-3xl text-white">70%+</div>
+              <p class="text-xs text-slate-300 mt-1">Corporates prioritizing wellness investments in 2026</p>
+            </div>
+            <div class="border-l-2 border-brandGold pl-4">
+              <div class="font-poppins font-bold text-3xl text-white">3.5x</div>
+              <p class="text-xs text-slate-300 mt-1">Demand growth for certified wellness strategists</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic">
+            "Organizations are actively seeking accredited experts who understand both human behavior and corporate business drivers."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. THREE-LEVEL CERTIFICATION PATHWAY -->
+  <section id="pathway" class="py-20 bg-brandLightBg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-poppins font-bold text-2xl sm:text-3xl text-brandNavy">Three-Level Certification Pathway</h2>
+        <p class="mt-3 text-slate-600">A structured, progressive framework designed to build comprehensive competence and authority.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Level 1 -->
+        <div class="bg-white rounded-xl border border-slate-200 p-8 flex flex-col justify-between hover:border-brandEmerald transition relative">
+          <div>
+            <div class="text-xs font-bold text-brandEmerald uppercase tracking-widest mb-2">Level 1</div>
+            <h3 class="font-poppins font-bold text-xl text-brandNavy mb-1">CCWT®</h3>
+            <p class="text-xs text-slate-500 mb-4">Certified Corporate Wellness Trainer</p>
+            <p class="text-sm text-slate-600 mb-6">Focuses on foundational pillars, facilitator skills, and delivering structured corporate wellness sessions.</p>
+          </div>
+          <button onclick="openModal('Apply - CCWT')" class="w-full bg-slate-100 hover:bg-brandEmerald hover:text-white text-brandNavy font-semibold text-sm py-2.5 rounded-lg transition">Explore Level 1</button>
+        </div>
+
+        <!-- Level 2 -->
+        <div class="bg-white rounded-xl border-2 border-brandEmerald p-8 flex flex-col justify-between shadow-md relative">
+          <div class="absolute -top-3 right-6 bg-brandEmerald text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</div>
+          <div>
+            <div class="text-xs font-bold text-brandEmerald uppercase tracking-widest mb-2">Level 2</div>
+            <h3 class="font-poppins font-bold text-xl text-brandNavy mb-1">CCWC®</h3>
+            <p class="text-xs text-slate-500 mb-4">Certified Corporate Wellness Consultant</p>
+            <p class="text-sm text-slate-600 mb-6">Focuses on organizational wellness diagnostics, policy design, and strategic corporate consulting.</p>
+          </div>
+          <button onclick="openModal('Apply - CCWC')" class="w-full bg-brandEmerald text-white font-semibold text-sm py-2.5 rounded-lg transition hover:bg-emerald-600">Explore Level 2</button>
+        </div>
+
+        <!-- Level 3 -->
+        <div class="bg-white rounded-xl border border-slate-200 p-8 flex flex-col justify-between hover:border-brandEmerald transition relative">
+          <div>
+            <div class="text-xs font-bold text-brandGold uppercase tracking-widest mb-2">Level 3</div>
+            <h3 class="font-poppins font-bold text-xl text-brandNavy mb-1">MCWS®</h3>
+            <p class="text-xs text-slate-500 mb-4">Master Corporate Wellness Strategist</p>
+            <p class="text-sm text-slate-600 mb-6">Designed for senior practitioners leading enterprise-wide wellness governance, metrics, and ROI models.</p>
+          </div>
+          <button onclick="openModal('Apply - MCWS')" class="w-full bg-slate-100 hover:bg-brandEmerald hover:text-white text-brandNavy font-semibold text-sm py-2.5 rounded-lg transition">Explore Level 3</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. THE 10 CORPORATE WELLNESS PILLARS -->
+  <section id="pillars" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-poppins font-bold text-2xl sm:text-3xl text-brandNavy">The 10 Corporate Wellness Pillars</h2>
+        <p class="mt-3 text-slate-600">Our holistic, multi-dimensional curriculum covering every facet of modern workplace wellbeing.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div class="p-5 border border-slate-200 rounded-lg hover:border-brandEmerald transition bg-brandLightBg/50">
+          <i data-lucide="activity" class="w-6 h-6 text-brandEmerald mb-3"></i>
+          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">1. Physical</h4>
+          <p class="text-xs text-slate-500">Ergonomics, movement, nutrition, and vital energy management.</p>
+        </div>
+        <div class="p-5 border border-slate-200 rounded-lg hover:border-brandEmerald transition bg-brandLightBg/50">
+          <i data-lucide="brain" class="w-6 h-6 text-brandEmerald mb-3"></i>
+          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">2. Mental & Emotional</h4>
+          <p class="text-xs text-slate-500">Stress resilience, emotional intelligence, and mindfulness.</p>
+        </div>
+        <div class="p-5 border border-slate-200 rounded-lg hover:border-brandEmerald transition bg-brandLightBg/50">
+          <i data-lucide="briefcase" class="w-6 h-6 text-brandEmerald mb-3"></i>
+          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">3. Occupational</h4>
+          <p class="text-xs text-slate-500">Work-life alignment, goal clarity, and burnout prevention.</p>
+        </div>
+        <div class="p-5 border border-slate-200 rounded-lg hover:border-brandEmerald transition bg-brandLightBg/50">
+          <i data-lucide="users" class="w-6 h-6 text-brandEmerald mb-3"></i>
+          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">4. Social</h4>
+          <p class="text-xs text-slate-500">Team cohesion, psychological safety, and communication.</p>
+        </div>
+        <div class="p-5 border border-slate-200 rounded-lg hover:border-brandEmerald transition bg-brandLightBg/50">
+          <i data-lucide="wallet" class="w-6 h-6 text-brandEmerald mb-3"></i>
+          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">5. Financial</h4>
+          <p class="text-xs text-slate-500">Financial literacy, planning, and workplace stress reduction.</p>
+        </div>
+        <div class="p-5 border border-slate-200 rounded-lg hover:border-brandEmerald transition bg-brandLightBg/50">
+          <i data-lucide="shield-check" class="w-6 h-6 text-brandEmerald mb-3"></i>
+          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">6. Safety & Emergency</h4>
+          <p class="text-xs text-slate-500">First-aid readiness, physical safety, and crisis management.</p>
+        </div>
+        <div class="p-5 border border-slate-200 rounded-lg hover:border-brandEmerald transition bg-brandLightBg/50">
+          <i data-lucide="sun" class="w-6 h-6 text-brandEmerald mb-3"></i>
+          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">7. Lifestyle</h4>
+          <p class="text-xs text-slate-500">Sleep hygiene, habit transformation, and fatigue management.</p>
+        </div>
+        <div class="p-5 border border-slate-200 rounded-lg hover:border-brandEmerald transition bg-brandLightBg/50">
+          <i data-lucide="award" class="w-6 h-6 text-brandEmerald mb-3"></i>
+          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">8. Leadership</h4>
+          <p class="text-xs text-slate-500">Compassionate leadership and wellness culture building.</p>
+        </div>
+        <div class="p-5 border border-slate-200 rounded-lg hover:border-brandEmerald transition bg-brandLightBg/50">
+          <i data-lucide="leaf" class="w-6 h-6 text-brandEmerald mb-3"></i>
+          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">9. Environmental</h4>
+          <p class="text-xs text-slate-500">Workspace optimization, acoustics, and healthy environments.</p>
+        </div>
+        <div class="p-5 border border-slate-200 rounded-lg hover:border-brandEmerald transition bg-brandLightBg/50">
+          <i data-lucide="laptop" class="w-6 h-6 text-brandEmerald mb-3"></i>
+          <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-1">10. Digital</h4>
+          <p class="text-xs text-slate-500">Screen balance, digital detoxing, and remote work health.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. ABOUT THE ACADEMY & 12. FOUNDER SECTION -->
+  <section id="about" class="py-20 bg-brandNavy text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      <!-- About -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-brandGold font-semibold text-sm tracking-wider uppercase">About Training Humans</span>
+          <h2 class="font-poppins font-bold text-2xl sm:text-3xl text-white mt-2 mb-6">
+            Building India's Most Trusted Corporate Wellness Academy
+          </h2>
+          <p class="text-slate-300 leading-relaxed mb-4">
+            Training Humans Corporate Wellness Academy is dedicated to institutionalizing corporate wellness. We empower professionals with scientific, human-centered methodologies to create sustainable health transformation within modern organizations.
+          </p>
+        </div>
+        <div class="bg-slate-800/60 p-8 rounded-xl border border-slate-700">
+          <h3 class="font-poppins font-semibold text-lg text-brandGold mb-4">Our Core Mission</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6">
+            To bridge the gap between corporate productivity and human health by training certified wellness professionals across India and beyond.
+          </p>
+          <div class="flex items-center space-x-3 text-brandEmerald font-medium text-sm">
+            <i data-lucide="globe" class="w-5 h-5"></i>
+            <span>Vision 2030: Expanding certified wellness access to every state.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Founder -->
+      <div class="border-t border-slate-800 pt-16 grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-4 flex justify-center">
+          <div class="w-48 h-48 rounded-full border-4 border-brandGold overflow-hidden bg-slate-700">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" alt="Ajay Kumar Shukla" class="w-full h-full object-cover" />
+          </div>
+        </div>
+        <div class="lg:col-span-8 space-y-4">
+          <span class="text-brandGold text-sm font-semibold uppercase tracking-wider">Leadership</span>
+          <h3 class="font-poppins font-bold text-2xl text-white">Ajay Kumar Shukla</h3>
+          <p class="text-xs text-brandEmerald font-medium">Founder, Training Humans | Corporate L&D Specialist</p>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            With over two decades of experience in corporate learning, sales, and behavioral interventions, Ajay Kumar Shukla established Training Humans to bring professional governance, scientific structure, and measurable outcomes to corporate wellness training.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. FREQUENTLY ASKED QUESTIONS -->
+  <section id="faqs" class="py-20 bg-brandLightBg">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-poppins font-bold text-2xl sm:text-3xl text-brandNavy">Frequently Asked Questions</h2>
+        <p class="mt-2 text-slate-600">Everything you need to know about our certification programs.</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ Item 1 -->
+        <div class="border border-slate-200 rounded-lg bg-white overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-poppins font-semibold text-brandNavy flex justify-between items-center focus:outline-none">
+            <span>What are the eligibility requirements for CCWT®?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="px-6 py-4 text-sm text-slate-600 border-t border-slate-100 hidden">
+            CCWT® is open to HR leaders, corporate trainers, healthcare professionals, coaches, and individuals passionate about driving corporate wellbeing. Prior training experience is helpful but not strictly required.
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="border border-slate-200 rounded-lg bg-white overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-poppins font-semibold text-brandNavy flex justify-between items-center focus:outline-none">
+            <span>How are the live sessions conducted?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="px-6 py-4 text-sm text-slate-600 border-t border-slate-100 hidden">
+            Sessions are held live online via interactive virtual classrooms. You will participate in practical assessments, case studies, and real-time facilitator demonstrations.
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="border border-slate-200 rounded-lg bg-white overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 font-poppins font-semibold text-brandNavy flex justify-between items-center focus:outline-none">
+            <span>Does the academy assist with business development?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="px-6 py-4 text-sm text-slate-600 border-t border-slate-100 hidden">
+            Yes. Our program includes specific modules on proposal writing, pricing strategies, pitch deck development, and alumni mentoring to help you secure corporate clients.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. CALL TO ACTION SECTION -->
+  <section class="py-16 bg-gradient-to-r from-brandNavy to-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <h2 class="font-poppins font-bold text-2xl sm:text-3xl">Ready to Lead Corporate Wellness?</h2>
+      <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base">
+        Join our upcoming cohort and transform your career while shaping healthier, higher-performing corporate workplaces.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 pt-2">
+        <button onclick="openModal('Apply CTA')" class="bg-brandEmerald hover:bg-emerald-600 text-white px-8 py-3.5 rounded-lg font-poppins font-semibold text-sm transition shadow-lg">
+          Apply Now
+        </button>
+        <button onclick="openModal('Download Prospectus CTA')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-8 py-3.5 rounded-lg font-poppins font-semibold text-sm transition">
+          Download Prospectus
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15. FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
+      <div>
+        <span class="font-poppins font-bold text-sm text-white block mb-2">TRAINING HUMANS</span>
+        <p class="leading-relaxed">Developing Corporate Wellness Professionals for Healthier Workplaces.</p>
+      </div>
+      <div>
+        <h5 class="font-semibold text-white mb-3">Quick Links</h5>
+        <ul class="space-y-2">
+          <li><a href="#hero" class="hover:text-white transition">Home</a></li>
+          <li><a href="#pathway" class="hover:text-white transition">Certifications</a></li>
+          <li><a href="#pillars" class="hover:text-white transition">10 Pillars</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold text-white mb-3">Legal & Terms</h5>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold text-white mb-3">Contact</h5>
+        <p>Email: info@traininghumans.com</p>
+        <p class="mt-1">Phone: +91 98765 43210</p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 mt-8 border-t border-slate-900 text-center">
+      &copy; 2026 Training Humans Corporate Wellness Academy. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- LEAD GENERATION POPUP MODAL -->
+  <div id="prospectusModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="bg-white rounded-xl max-w-md w-full p-6 relative shadow-2xl">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      
+      <div class="text-center mb-6">
+        <h3 id="modalTitle" class="font-poppins font-bold text-xl text-brandNavy">Download Prospectus</h3>
+        <p class="text-xs text-slate-500 mt-1">Fill in your details to get instant access to the academy syllabus.</p>
+      </div>
+
+      <form id="leadForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name</label>
+          <input type="text" required placeholder="John Doe" class="w-full px-3 py-2 border border-slate-300 rounded-md text-sm focus:outline-none focus:border-brandEmerald" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address</label>
+          <input type="email" required placeholder="john@company.com" class="w-full px-3 py-2 border border-slate-300 rounded-md text-sm focus:outline-none focus:border-brandEmerald" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Mobile Number</label>
+          <input type="tel" required placeholder="+91 9876543210" class="w-full px-3 py-2 border border-slate-300 rounded-md text-sm focus:outline-none focus:border-brandEmerald" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Profession</label>
+          <select required class="w-full px-3 py-2 border border-slate-300 rounded-md text-sm focus:outline-none focus:border-brandEmerald text-slate-700">
+            <option value="">Select Profession</option>
+            <option value="HR / L&D">HR / L&D Professional</option>
+            <option value="Corporate Trainer">Corporate Trainer</option>
+            <option value="Healthcare">Healthcare Professional</option>
+            <option value="Coach / Consultant">Coach / Consultant</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        
+        <button type="submit" class="w-full bg-brandEmerald hover:bg-emerald-600 text-white font-poppins font-semibold text-sm py-3 rounded-lg transition shadow-md">
+          Submit & Download
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Modal Control Functions
+    function openModal(actionName) {
+      const modal = document.getElementById('prospectusModal');
+      const modalTitle = document.getElementById('modalTitle');
+      if (actionName) {
+        modalTitle.innerText = actionName;
+      }
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('prospectusModal');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    // Lead Capture Handling
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      alert('Thank you! Your details have been submitted successfully. The prospectus download will begin shorty.');
+      closeModal();
+    }
+
+    // Accordion Toggle Function
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('i');
+      content.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+    }
+  </script>
+</body>
+</html>
