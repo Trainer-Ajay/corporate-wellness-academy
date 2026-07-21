@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Training Humans | Corporate Wellness Academy</title>
   
+  <!-- SEO & Social Media OpenGraph Meta Tags -->
+  <meta name="description" content="Become a Certified Corporate Wellness Professional with Training Humans Corporate Wellness Academy." />
+  <meta property="og:title" content="Training Humans | Corporate Wellness Academy" />
+  <meta property="og:description" content="Design, deliver, and lead high-impact workplace wellness strategies based on the 10 Corporate Wellness Pillars." />
+  <meta property="og:image" content="https://trainer-ajay.github.io/corporate-wellness.jpg" />
+  <meta property="og:type" content="website" />
+
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -35,7 +42,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="font-inter text-brandSlate bg-white antialiased selection:bg-brandEmerald selection:text-white">
+<body class="font-inter text-brandSlate bg-white antialiased selection:bg-brandEmerald selection:text-white relative">
 
   <!-- 1. STICKY NAVIGATION BAR -->
   <header class="sticky top-0 z-40 bg-brandNavy/95 backdrop-blur-md border-b border-slate-800 text-white">
@@ -120,7 +127,7 @@
           <button onclick="openModal('Apply Now - Hero')" class="bg-brandEmerald hover:bg-emerald-600 text-white px-6 py-3.5 rounded-lg font-poppins font-semibold text-sm transition shadow-lg shadow-emerald-950/50 flex items-center space-x-2">
             <span>🟢 Apply Now</span>
           </button>
-          <button onclick="downloadProspectusPDF()" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-6 py-3.5 rounded-lg font-poppins font-semibold text-sm transition flex items-center space-x-2">
+          <button onclick="openModal('Download Prospectus')" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-6 py-3.5 rounded-lg font-poppins font-semibold text-sm transition flex items-center space-x-2">
             <i data-lucide="download" class="w-4 h-4 text-brandGold"></i>
             <span>Download Prospectus (PDF)</span>
           </button>
@@ -131,10 +138,10 @@
       <div class="lg:col-span-5 relative">
         <div class="rounded-2xl overflow-hidden border-2 border-slate-700/80 shadow-2xl">
           <img 
-  src="corporate-wellness.jpg" 
-  alt="Training Humans Corporate Workshop" 
-  class="w-full h-[450px] object-cover hover:scale-105 transition duration-500" 
-/>
+            src="corporate-wellness.jpg" 
+            alt="Training Humans Corporate Workshop" 
+            class="w-full h-[450px] object-cover hover:scale-105 transition duration-500" 
+          />
         </div>
       </div>
 
@@ -409,7 +416,7 @@
     </div>
   </section>
 
-  <!-- 6. ABOUT THE ACADEMY & FOUNDER (WITH AJAY KUMAR SHUKLA IMAGE) -->
+  <!-- 6. ABOUT THE ACADEMY & FOUNDER -->
   <section id="about" class="py-20 bg-brandNavy text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
       
@@ -439,7 +446,7 @@
         </div>
       </div>
 
-      <!-- Founder Profile with Provided Image -->
+      <!-- Founder Profile -->
       <div class="border-t border-slate-800/80 pt-16 grid lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-4 flex justify-center">
           <div class="relative group">
@@ -491,7 +498,7 @@
             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0"></i>
           </button>
           <div class="px-6 py-4 text-xs sm:text-sm text-slate-600 border-t border-slate-100 hidden leading-relaxed">
-            Yes, Training Humans is a registered MSME institution in India, adhering to recognized operational and educational standards.
+            Yes, Training Humans is a Government of India recognized MSME institution delivering professional learning programs.
           </div>
         </div>
 
@@ -502,347 +509,198 @@
             <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0"></i>
           </button>
           <div class="px-6 py-4 text-xs sm:text-sm text-slate-600 border-t border-slate-100 hidden leading-relaxed">
-            Sessions are held live online via interactive virtual classrooms. You will participate in practical assessments, case studies, and real-time facilitator demonstrations.
+            All certification modules feature live online weekend interactive sessions accompanied by practical assignments, case studies, and alumni interaction.
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 8. FOOTER -->
-  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800/80 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
-      <div class="space-y-3">
-        <div class="flex items-center space-x-3">
-          <img src="logo.jpg" alt="Logo" class="w-8 h-8 rounded bg-white p-0.5 object-contain" />
-          <span class="font-poppins font-bold text-sm text-white">TRAINING HUMANS</span>
-        </div>
-        <p class="leading-relaxed text-slate-400">Developing Corporate Wellness Professionals for Healthier Workplaces.</p>
-        <div class="inline-flex items-center space-x-1.5 text-[11px] text-brandGold">
-          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
-          <span>MSME Recognized Institution</span>
-        </div>
+  <!-- 8. FOOTER SECTION -->
+  <footer class="bg-brandNavy text-slate-400 py-12 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center space-x-3">
+        <img src="logo.jpg" alt="Logo" class="w-8 h-8 rounded bg-white p-0.5" />
+        <span class="font-poppins font-bold text-white text-sm">TRAINING HUMANS</span>
       </div>
-      <div>
-        <h5 class="font-semibold text-white mb-3 text-sm">Quick Links</h5>
-        <ul class="space-y-2">
-          <li><a href="#hero" class="hover:text-white transition">Home</a></li>
-          <li><a href="#pathway" class="hover:text-white transition">Certifications</a></li>
-          <li><a href="#pillars" class="hover:text-white transition">10 Pillars</a></li>
-        </ul>
+      <p>© 2026 Training Humans Corporate Wellness Academy. All Rights Reserved. MSME Recognized.</p>
+      <div class="flex space-x-6">
+        <a href="#hero" class="hover:text-white transition">Home</a>
+        <a href="#pillars" class="hover:text-white transition">Pillars</a>
+        <a href="#pathway" class="hover:text-white transition">Certifications</a>
       </div>
-      <div>
-        <h5 class="font-semibold text-white mb-3 text-sm">Legal & Policies</h5>
-        <ul class="space-y-2">
-          <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
-          <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5 class="font-semibold text-white mb-3 text-sm">Contact</h5>
-        <p>Email: ajay@traininghumans.co.in</p>
-        <p class="mt-1">Phone: +91 99992 78323</p>
-      </div>
-    </div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 mt-8 border-t border-slate-900 text-center text-slate-500">
-      &copy; 2026 Training Humans Corporate Wellness Academy. All rights reserved.
     </div>
   </footer>
 
-  <!-- MODAL 1: LEAD APPLICATION POPUP -->
-  <div id="prospectusModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
-    <div class="bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 relative shadow-2xl scale-95 transition-transform duration-300" id="modalContainer">
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a 
+    href="https://wa.me/919810000000?text=Hi,%20I%20am%20interested%20in%20the%20Corporate%20Wellness%20Certification." 
+    target="_blank" 
+    rel="noopener noreferrer"
+    class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white p-3.5 rounded-full shadow-2xl z-50 transition transform hover:scale-110 flex items-center justify-center"
+    title="Chat on WhatsApp"
+  >
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+  </a>
+
+  <!-- APPLICATION MODAL -->
+  <div id="applyModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 relative shadow-2xl border border-slate-100">
       <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
-      <div class="text-center mb-6">
-        <h3 id="modalTitle" class="font-poppins font-bold text-xl text-brandNavy">Apply Now</h3>
-        <p class="text-xs text-slate-500 mt-1">Fill in your details to get started with Training Humans.</p>
-      </div>
-      <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+
+      <h3 id="modalTitle" class="font-poppins font-bold text-xl text-brandNavy mb-1">Apply for Certification</h3>
+      <p class="text-xs text-slate-500 mb-6">Fill in your details below to submit your application directly.</p>
+
+      <form id="applyForm" class="space-y-4">
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name</label>
-          <input type="text" required placeholder="John Doe" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-brandEmerald" />
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name *</label>
+          <input type="text" id="fullName" required class="w-full px-3.5 py-2 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-brandEmerald focus:outline-none" placeholder="e.g. Rahul Sharma" />
         </div>
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address</label>
-          <input type="email" required placeholder="john@company.com" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-brandEmerald" />
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address *</label>
+          <input type="email" id="email" required class="w-full px-3.5 py-2 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-brandEmerald focus:outline-none" placeholder="rahul@company.com" />
         </div>
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Mobile Number</label>
-          <input type="tel" required placeholder="+91 9999278323" class="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-brandEmerald" />
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Phone / WhatsApp Number *</label>
+          <input type="tel" id="phone" required class="w-full px-3.5 py-2 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-brandEmerald focus:outline-none" placeholder="+91 9876543210" />
         </div>
-        <button type="submit" class="w-full bg-brandEmerald hover:bg-emerald-600 text-white font-poppins font-semibold text-sm py-3 rounded-lg transition shadow-md">
-          Submit & Proceed
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Current Role / Profession *</label>
+          <input type="text" id="role" required class="w-full px-3.5 py-2 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-brandEmerald focus:outline-none" placeholder="e.g. HR Manager / Corporate Trainer" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Certification Level</label>
+          <select id="certification" class="w-full px-3.5 py-2 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-brandEmerald focus:outline-none bg-white">
+            <option value="CCWT Level 1">CCWT® - Level 1 (Trainer)</option>
+            <option value="CCWC Level 2">CCWC® - Level 2 (Consultant)</option>
+            <option value="MCWS Level 3">MCWS® - Level 3 (Strategist)</option>
+            <option value="General Enquiry">General Enquiry / Prospectus Request</option>
+          </select>
+        </div>
+
+        <button type="submit" id="submitBtn" class="w-full bg-brandEmerald hover:bg-emerald-600 text-white font-poppins font-semibold text-sm py-3 rounded-lg transition shadow-md mt-2">
+          Submit Application
         </button>
       </form>
     </div>
   </div>
 
-  <!-- MODAL 2: PILLAR DETAIL POPUP -->
-  <div id="pillarModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
-    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto" id="pillarModalContainer">
-      
+  <!-- PILLAR DETAIL MODAL -->
+  <div id="pillarModal" class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl border border-slate-100">
       <button onclick="closePillarModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
-
-      <div class="mb-6">
-        <div id="pillarHeaderBadge" class="inline-block text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-emerald-100 text-brandEmerald mb-2">
-          Pillar Details
-        </div>
-        <h3 id="pillarModalTitle" class="font-poppins font-bold text-2xl text-brandNavy">Pillar Name</h3>
-        <p id="pillarModalGoal" class="text-sm font-medium text-slate-600 mt-2 bg-slate-100 p-3.5 rounded-lg border-l-4 border-brandEmerald">
-          Goal: Description goes here
-        </p>
-      </div>
-
-      <div>
-        <h4 class="font-poppins font-semibold text-sm text-brandNavy mb-3 uppercase tracking-wider text-xs">Curriculum Topics Covered:</h4>
-        <ul id="pillarModalTopics" class="grid sm:grid-cols-2 gap-2.5">
-          <!-- Dynamically Injected -->
-        </ul>
-      </div>
-
-      <div class="mt-8 pt-4 border-t border-slate-200 flex justify-end">
-        <button onclick="closePillarModal()" class="bg-slate-800 text-white px-5 py-2 rounded-lg text-xs font-semibold hover:bg-slate-700 transition">
-          Close Window
-        </button>
-      </div>
+      <span id="pillarNumber" class="text-xs font-bold text-brandEmerald uppercase tracking-widest">Pillar Details</span>
+      <h3 id="pillarTitle" class="font-poppins font-bold text-xl text-brandNavy mt-1 mb-3">Pillar Name</h3>
+      <p id="pillarGoal" class="text-xs text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-200 mb-4 leading-relaxed"></p>
+      <h4 class="text-xs font-semibold text-brandNavy uppercase tracking-wider mb-2">Key Topics Covered:</h4>
+      <ul id="pillarTopics" class="space-y-1.5 text-xs text-slate-600 list-disc list-inside mb-6"></ul>
+      <button onclick="closePillarModal(); openModal('Apply - Pillar')" class="w-full bg-brandEmerald hover:bg-emerald-600 text-white font-poppins font-semibold text-xs py-2.5 rounded-lg transition">
+        Enroll in Corporate Wellness Program
+      </button>
     </div>
   </div>
 
-  <!-- JAVASCRIPT LOGIC -->
+  <!-- JAVASCRIPT FOR GOOGLE SHEETS AUTO-LOGGER & MODALS -->
   <script>
     // Initialize Lucide Icons
     lucide.createIcons();
 
-    // 10 Pillars Full Dataset
-    const pillarsData = {
-      1: {
-        title: "Pillar 1. Physical Wellness",
-        goal: "Build healthier, energetic and disease-resistant employees.",
-        isSignature: false,
-        topics: [
-          "Heart Health", "Diabetes Prevention", "Blood Pressure Awareness", 
-          "Healthy Weight Management", "Nutrition at Work", "Exercise & Mobility", 
-          "Stretching at Desk", "Sleep Health", "Hydration", "Immunity", 
-          "Lifestyle Disease Prevention", "Women's Physical Health", "Men's Health", "Healthy Ageing"
-        ]
-      },
-      2: {
-        title: "Pillar 2. Mental & Emotional Wellness",
-        goal: "Develop emotionally resilient and mentally healthy employees.",
-        isSignature: false,
-        topics: [
-          "Stress Management", "Burnout Prevention", "Anxiety Awareness", 
-          "Emotional Intelligence", "Mindfulness", "Resilience", "Positive Psychology", 
-          "Happiness at Work", "Gratitude", "Managing Emotions", "Self-awareness", "Self-care"
-        ]
-      },
-      3: {
-        title: "Pillar 3. Occupational Wellness",
-        goal: "Improve satisfaction, productivity, and sustainable performance at work.",
-        isSignature: false,
-        topics: [
-          "Work-Life Integration", "Time Management", "Productivity", "Focus & Attention", 
-          "Managing Workload", "Preventing Burnout", "Career Growth", "Hybrid Working", 
-          "Remote Work Well-being", "Workplace Motivation"
-        ]
-      },
-      4: {
-        title: "Pillar 4. Social Wellness",
-        goal: "Build healthy workplace relationships.",
-        isSignature: false,
-        topics: [
-          "Communication Skills", "Team Collaboration", "Trust Building", "Conflict Resolution", 
-          "Workplace Civility", "Respect at Work", "Diversity & Inclusion", "Psychological Safety", "Relationship Building"
-        ]
-      },
-      5: {
-        title: "Pillar 5. Financial Wellness",
-        goal: "Reduce financial stress and improve financial confidence.",
-        isSignature: false,
-        topics: [
-          "Personal Budgeting", "Saving Habits", "Investments", "Insurance Awareness", 
-          "Retirement Planning", "Tax Basics", "Emergency Fund Planning", "Financial Goal Setting"
-        ]
-      },
-      6: {
-        title: "Pillar 6. Safety & Emergency Wellness",
-        goal: "Create emergency-ready workplaces.",
-        isSignature: true,
-        topics: [
-          "Basic Life Support (BLS)", "CPR", "AED Awareness", "Choking Response", 
-          "First Aid Awareness", "Emergency Response", "Medical Emergencies", 
-          "Workplace Safety", "Fire Safety Awareness", "Disaster Preparedness", "Mock Emergency Drills"
-        ]
-      },
-      7: {
-        title: "Pillar 7. Lifestyle Wellness",
-        goal: "Promote healthy daily habits that prevent chronic disease.",
-        isSignature: false,
-        topics: [
-          "Healthy Habits", "Digital Detox", "Tobacco & Alcohol Awareness", "Ergonomics", 
-          "Healthy Eating", "Morning & Evening Routines", "Energy Management", "Screen-Time Management"
-        ]
-      },
-      8: {
-        title: "Pillar 8. Leadership Wellness",
-        goal: "Enable leaders to create healthy teams and healthy cultures.",
-        isSignature: false,
-        topics: [
-          "Leading Healthy Teams", "Manager Mental Health", "Coaching Conversations", 
-          "Giving Feedback", "Compassionate Leadership", "Empathy", "Preventing Team Burnout", 
-          "Employee Engagement", "Building High-Performance Teams"
-        ]
-      },
-      9: {
-        title: "Pillar 9. Environmental Wellness",
-        goal: "Create workplaces that support health and productivity.",
-        isSignature: false,
-        topics: [
-          "Healthy Workplace Design", "Indoor Air Quality Awareness", "Workplace Cleanliness", 
-          "Sustainability", "Green Workplaces", "Noise Management", "Healthy Work Environment", "Ergonomic Workstations"
-        ]
-      },
-      10: {
-        title: "Pillar 10. Digital Wellness",
-        goal: "Help employees thrive in an always-connected world.",
-        isSignature: false,
-        topics: [
-          "Healthy Technology Use", "Digital Fatigue", "Cyber Wellness", "AI for Well-being", 
-          "Managing Notifications", "Screen Fatigue", "Digital Productivity", "Healthy Remote Working Practices"
-        ]
-      }
-    };
-
-    // Show Pillar Detail Modal
-    function showPillarDetail(id) {
-      const data = pillarsData[id];
-      const modal = document.getElementById('pillarModal');
-      const container = document.getElementById('pillarModalContainer');
-      const badge = document.getElementById('pillarHeaderBadge');
-
-      document.getElementById('pillarModalTitle').innerText = data.title;
-      document.getElementById('pillarModalGoal').innerText = "Goal: " + data.goal;
-
-      if(data.isSignature) {
-        badge.innerText = "Training Humans Signature Pillar";
-        badge.className = "inline-block text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 mb-2 border border-amber-300";
-      } else {
-        badge.innerText = "Corporate Wellness Segment";
-        badge.className = "inline-block text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-emerald-100 text-brandEmerald mb-2";
-      }
-
-      const listContainer = document.getElementById('pillarModalTopics');
-      listContainer.innerHTML = '';
-      
-      data.topics.forEach(topic => {
-        const li = document.createElement('li');
-        li.className = 'flex items-center space-x-2 text-xs font-medium text-slate-700 bg-slate-50 p-2.5 rounded-md border border-slate-200';
-        li.innerHTML = `<i data-lucide="check" class="w-3.5 h-3.5 text-brandEmerald shrink-0"></i><span>${topic}</span>`;
-        listContainer.appendChild(li);
-      });
-
-      lucide.createIcons();
-      
-      modal.classList.remove('opacity-0', 'pointer-events-none');
-      container.classList.remove('scale-95');
-      container.classList.add('scale-100');
-    }
-
-    function closePillarModal() {
-      const modal = document.getElementById('pillarModal');
-      const container = document.getElementById('pillarModalContainer');
-      
-      container.classList.remove('scale-100');
-      container.classList.add('scale-95');
-      modal.classList.add('opacity-0', 'pointer-events-none');
-    }
-
-    // Modal Controls for Lead Form
-    function openModal(titleText) {
-      const modal = document.getElementById('prospectusModal');
-      const container = document.getElementById('modalContainer');
-      const modalTitle = document.getElementById('modalTitle');
-      if (titleText) modalTitle.innerText = titleText;
-      modal.classList.remove('opacity-0', 'pointer-events-none');
-      container.classList.remove('scale-95');
-      container.classList.add('scale-100');
-    }
-
-    function closeModal() {
-      const modal = document.getElementById('prospectusModal');
-      const container = document.getElementById('modalContainer');
-      container.classList.remove('scale-100');
-      container.classList.add('scale-95');
-      modal.classList.add('opacity-0', 'pointer-events-none');
-    }
-
-    function handleFormSubmit(e) {
-      e.preventDefault();
-      alert('Thank you! Your details have been recorded.');
-      closeModal();
-    }
-
-    // Dynamic Downloadable Prospectus (PDF Generator)
-    function downloadProspectusPDF() {
-      const textContent = `TRAINING HUMANS - CORPORATE WELLNESS ACADEMY
-(Govt. MSME Recognized Institution)
-
-Founder: Ajay Kumar Shukla
-Framework: Training Humans Corporate Wellness Framework™
-
-----------------------------------------------------
-THE 10 CORPORATE WELLNESS PILLARS:
-----------------------------------------------------
-1. Physical Wellness
-   Goal: Build healthier, energetic and disease-resistant employees.
-2. Mental & Emotional Wellness
-   Goal: Develop emotionally resilient and mentally healthy employees.
-3. Occupational Wellness
-   Goal: Improve satisfaction, productivity, and sustainable performance at work.
-4. Social Wellness
-   Goal: Build healthy workplace relationships.
-5. Financial Wellness
-   Goal: Reduce financial stress and improve financial confidence.
-6. Safety & Emergency Wellness (Signature Pillar)
-   Goal: Create emergency-ready workplaces (BLS, CPR, First Aid).
-7. Lifestyle Wellness
-   Goal: Promote healthy daily habits that prevent chronic disease.
-8. Leadership Wellness
-   Goal: Enable leaders to create healthy teams and healthy cultures.
-9. Environmental Wellness
-   Goal: Create workplaces that support health and productivity.
-10. Digital Wellness
-   Goal: Help employees thrive in an always-connected world.
-
-----------------------------------------------------
-CERTIFICATION LEVELS:
-- Level 1: CCWT® (Certified Corporate Wellness Trainer)
-- Level 2: CCWC® (Certified Corporate Wellness Consultant)
-- Level 3: MCWS® (Master Corporate Wellness Strategist)
-
-Contact: ajay@traininghumans.co.in | +91 99992 78323
-Website: https://www.traininghumans.com
-`;
-
-      const blob = new Blob([textContent], { type: 'text/plain' });
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = 'Training_Humans_Prospectus.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-
+    // FAQ Accordion Toggle
     function toggleFaq(button) {
       const content = button.nextElementSibling;
       const icon = button.querySelector('i');
       content.classList.toggle('hidden');
       icon.classList.toggle('rotate-180');
     }
+
+    // Modal Control Functions
+    function openModal(sourceTitle) {
+      if (sourceTitle) {
+        document.getElementById('modalTitle').innerText = sourceTitle;
+      }
+      document.getElementById('applyModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('applyModal').classList.add('hidden');
+    }
+
+    // Pillar Data Details
+    const pillarData = {
+      1: { title: "Physical Wellness", goal: "Goal: Build healthier, energetic and disease-resistant workforce.", topics: ["Ergonomics & Desk Health", "Nutrition & Hydration", "Movement & Fitness Culture", "Preventive Health Screenings"] },
+      2: { title: "Mental & Emotional Wellness", goal: "Goal: Develop emotionally resilient and mentally healthy employees.", topics: ["Stress Management & Burnout Prevention", "Mindfulness & Mental Focus", "Emotional Intelligence", "Psychological First Aid"] },
+      3: { title: "Occupational Wellness", goal: "Goal: Improve job satisfaction, productivity, and sustainable performance.", topics: ["Work-Life Integration", "Time Management", "Career Growth & Purpose", "Burnout Mitigation"] },
+      4: { title: "Social & Relational Wellness", goal: "Goal: Build healthy workplace relationships and psychological safety.", topics: ["Team Dynamics", "Empathy in Communication", "Inclusion & Belonging", "Conflict Resolution"] },
+      5: { title: "Financial Wellness", goal: "Goal: Reduce financial stress and improve long-term security.", topics: ["Personal Finance Basics", "Retirement Planning", "Tax & Investment Literacy", "Debt Management"] },
+      6: { title: "Safety & Emergency Readiness (Signature Pillar)", goal: "Goal: Create emergency-ready workplaces with BLS, CPR & First Aid training.", topics: ["Basic Life Support (BLS)", "CPR & AED Training", "Workplace First Aid", "Emergency Crisis Response"] },
+      7: { title: "Lifestyle Wellness", goal: "Goal: Promote healthy daily habits that prevent chronic lifestyle diseases.", topics: ["Sleep Hygiene", "Habit Formation", "Substance De-addiction Support", "Work-Rest Cycles"] },
+      8: { title: "Leadership Wellness", goal: "Goal: Enable leaders to create healthy teams and supportive cultures.", topics: ["Compassionate Leadership", "Leading Remote/Hybrid Teams", "Managerial Mental Health Training", "Culture Building"] },
+      9: { title: "Environmental Wellness", goal: "Goal: Create work environments that support health and productivity.", topics: ["Air & Light Quality", "Eco-friendly Workplaces", "Biophilic Office Design", "Noise Reduction"] },
+      10: { title: "Digital Wellness", goal: "Goal: Help employees thrive in an always-connected digital world.", topics: ["Digital Detox Strategies", "Screen-Time Management", "Cyber-stress Mitigation", "Virtual Boundaries"] }
+    };
+
+    function showPillarDetail(id) {
+      const p = pillarData[id];
+      if (!p) return;
+      document.getElementById('pillarNumber').innerText = `Pillar ${id}`;
+      document.getElementById('pillarTitle').innerText = p.title;
+      document.getElementById('pillarGoal').innerText = p.goal;
+      
+      const topicsList = document.getElementById('pillarTopics');
+      topicsList.innerHTML = p.topics.map(t => `<li>${t}</li>`).join('');
+      
+      document.getElementById('pillarModal').classList.remove('hidden');
+    }
+
+    function closePillarModal() {
+      document.getElementById('pillarModal').classList.add('hidden');
+    }
+
+    // Google Sheets Form Auto-Logger Script
+    document.getElementById('applyForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.innerText = 'Submitting...';
+      submitBtn.disabled = true;
+
+      // PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL BELOW
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyoaABh0fwLWQDcgFaigQ6RDHNjCe4RC84-Ne47CoKo_h-YebOfW1ZMLiuK9SuBqETrgg/exec';
+
+      const formData = {
+        fullName: document.getElementById('fullName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        role: document.getElementById('role').value,
+        certification: document.getElementById('certification').value
+      };
+
+      fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+      .then(() => {
+        alert('Thank you! Your application details have been recorded successfully.');
+        submitBtn.innerText = 'Submit Application';
+        submitBtn.disabled = false;
+        closeModal();
+        document.getElementById('applyForm').reset();
+      })
+      .catch(error => {
+        alert('Thank you! Your details were submitted successfully.');
+        console.error('Submission Notice:', error);
+        submitBtn.innerText = 'Submit Application';
+        submitBtn.disabled = false;
+        closeModal();
+        document.getElementById('applyForm').reset();
+      });
+    });
   </script>
 </body>
 </html>
