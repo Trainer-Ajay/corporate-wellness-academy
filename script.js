@@ -1,0 +1,1 @@
+document.querySelectorAll('.card').forEach(c=>c.onmouseover=()=>c.style.transform='scale(1.03)');document.querySelectorAll('.card').forEach(c=>c.onmouseout=()=>c.style.transform='scale(1)');
